@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{%  block title %} Teams {% endblock %}
+
+{%  block content %}
+
+                        <h1>Leagues</h1>
+
+                       <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Leagues Table
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <div class="table-responsive">
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+
+                                            <th>League Name</th>
+
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+
+                                    {% for arg in data %}
+                                        <tr>
+
+                                            <td>{{ arg.league_name }}</td>
+
+                                        </tr>
+
+                                    {% endfor %}
+
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- /.table-responsive -->
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+
+ {% endblock %}
+
+

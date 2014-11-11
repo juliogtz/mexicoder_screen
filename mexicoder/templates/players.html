@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{%  block title %} Players {% endblock %}
+
+{%  block content %}
+
+                        <h1>Players</h1>
+
+                       <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Players Table
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <div class="table-responsive">
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+
+                                            <th>First Name</th>
+                                            <th>Last Name</th>
+                                            <th>Team</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+
+                                    {% for arg in data %}
+                                        <tr>
+
+                                            <td>{{ arg.first_name }}</td>
+                                            <td>{{ arg.last_name }}</td>
+                                            <td>{{ arg.team_id.team_name }}</td>
+                                        </tr>
+
+                                    {% endfor %}
+
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- /.table-responsive -->
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+
+ {% endblock %}
+
+
